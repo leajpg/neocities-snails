@@ -28,6 +28,9 @@
           font-size:12px;
 }
 
+.leasroom{
+  transition: filter 0.5s ease-in-out;
+}
         
 /*change the link color*/
         
