@@ -16,17 +16,26 @@
         font-size:14px;
         }
         
+        ul{
+          font-size: 13px;
+        }
+
+        ul:hover{
+          transition: all .5s;
+        }
         	
         	ul.totoro{
-          list-style-image: url("/EctImgs/moon.png");
-          font-size:14px;
+          list-style-image: url("../Images/EctImgs/moon.png");
+          font-size:12px;
           font-weight:bold;
 }
 
           ul.leaf{
-          list-style-image: url("/EctImgs/Star.png");
+          list-style-image: url("../Images/EctImgs/Star.png");
           font-size:12px;
-}
+          }
+
+
 
 .leasroom{
   transition: filter 0.5s ease-in-out;
@@ -62,7 +71,7 @@
         }
         
       .container{
-        width:600px;
+        width:720px;
         height: auto;
         border: solid white 1px;
         margin-left:auto;
@@ -169,5 +178,10 @@
           padding:7px;
           text-align: left;
           font-size:14px;
+        }
+
+        .box{
+          width:800px;
+          font size:14px;
         }
       
