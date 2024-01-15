@@ -4,14 +4,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="/public/jquery.style-my-tooltips.js"></script>
     
     <title>Lea's Room</title>
     <link href="css/main.css" rel="stylesheet" type="text/css" media="all">
+       <link href="css/style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="counter.js"></script>
     <script>
     $(document).ready(function(){
 
    $("#updates").load("./updates.html");
+
+});
+   </script>
+    <script>
+      (function($){
+          $(document).ready(function(){
+              $("[title]").style_my_tooltips();
+          });
+      })(jQuery);
+  </script>
+    <script>
+    $(document).ready(function(){
+
+   $("#updates").load("./updates");
 
 });
    </script>
@@ -83,11 +101,24 @@
     .cat{
     
     }
+*/   
 
-    .computer{
-
+.computer{
+    background-image: url(./Images/Splash/SomeonesPC.png);
+    left:310px;
+    top:180px;
+    position:absolute;
+    background-size: cover;
+    width:80px;
+    height: 130px;
     }
-*/              
+
+    .computer:hover{
+      filter: drop-shadow(0 0 1rem rgb(255, 255, 255));
+      transform:translateY(2px);
+      transition: all ease 0.2s;
+    }
+
     #updates {
         margin-top: 20px;
         height: 100px;
@@ -173,6 +204,15 @@
           background-position: center center;
           background-repeat: no-repeat;
         }
+
+        .computer{
+          width: 60px;
+          background-size: contain;
+          background-position: center center;
+          background-repeat: no-repeat;
+          left:260px;
+          top:140px;
+        }
     }
 
     @media screen and (max-width: 700px) {
@@ -191,6 +231,15 @@
           background-size: contain;
           background-position: center center;
           background-repeat: no-repeat;
+        }
+
+        .computer{
+          width: 50px;
+          background-size: contain;
+          background-position: center center;
+          background-repeat: no-repeat;
+          left:210px;
+          top:100px;
         }
 
     }
@@ -212,6 +261,7 @@
 <div id="container">
 
   <div class="room"></div>
+  <a href="/someonespc"><div class="computer" title="Someone's PC"></div></a>
 
 </div>
 
