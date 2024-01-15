@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    
+    <!--change your title of the whole page here !-->
+    <title>Lea's Room</title>
+    <link href="css/testing.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/nav.css" rel="stylesheet" type="text/css" media="all">
+    <script type="text/javascript" src="counter.js"></script>
+   
+  </head>
+  <body>
+    <div class="container1">
+    <header>
+      Header
+  </header>
+
+  <aside class="left">
+      About / Someone's PC / Bookshelf / Art / Pets
+  </aside>
+
+  <main>
+    <div id="fish1"><a href="/about.html"></a><img src="./Images/Testing/fishy1.png"></div>
+    <div id="fish2"><a href="/about.html"></a><img src="./Images/Testing/fishy2.png"></div>
+    <div id="fish3"><a href="/about.html"></a><img src="./Images/Testing/fishy3.png"></div>
+  </main>
+
+  <aside class="right">
+     hello
+  </aside>
+
+  <footer>
+      Footer
+  </footer>
+</div>
+    
+  
+
+
+   <script type="text/javascript">
+    var mode = 0;
+    function grayscale() {
+    var photo = document.querySelector(".leasroom");
+    if (mode === 0) {
+    photo.style.filter = "grayscale(100%)";
+    mode = 1;
+  } else {
+    photo.style.filter = "none";
+    mode = 0;
+  }
+}
+
+
+
+
+function toggleSlide(el) {
+  var elem = document.getElementById(el);
+
+  // Check if the element is currently visible
+  var isVisible = elem.clientHeight !== 0;
+
+  // Toggle between sliding up and sliding down
+  if (isVisible) {
+    // If visible, slide up
+    elem.style.height = "0px";
+  } else {
+    // If hidden, slide down
+    elem.style.height = "75px"; // Adjust the height as needed
+  }
+}
+
+   </script>
+   
+   
+  </body>
+</html>
