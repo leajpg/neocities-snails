@@ -74,6 +74,13 @@ input,select{vertical-align:middle}
 	z-index: 1000;
     color:var(--color-primary-a80);
 }
+
+/* Make the window draggable */
+.dragOnlyWindow.ui-draggable {
+    cursor: move;
+  }
+
+
 .window.closed {
 	display: none;
 }
@@ -223,32 +230,32 @@ input,select{vertical-align:middle}
 }
 
 /*Demo styles BEGIN*/
-#window0 {	top: 100px;	left: 170px;}
-#window1 {	top: 524px; left: 218px;}
-#window2 {	top: 250px; left: 210px;}
-#window3 {	top: 100px; left: 560px;}
-#window0 .wincontent {	width: 350px; height: 350px;	}
-#window1 .wincontent {	width: 300px; height: 200px;	}
-#window2 .wincontent {	width: 400px; height: 350px;	}
-#window3 .wincontent {	width: 600px; height: 500px;	}
+#window0 {	top: 70px;	left: 175px;} /* Currently... */
+#window1 {	top: 80px; left: 955px;} 
+#window2 {	top: 400px; left: 955px;}
+#window3 {	top: 50px; left: 415px;} /* Main Window */
+#window0 .wincontent {	width: 100px; height: 300px;	} /* Currently... */
+#window1 .wincontent {	width: 130px; height: 250px;	}
+#window2 .wincontent {	width: 160px; height: 100px;	}
+#window3 .wincontent {	width: 500px; height: 400px;	} /* Main Window */
 @media screen and (max-width:960px){
-	#window0 {	left: 30px;	top:150px;}
-	#window3 {	left: 70px; top:210px;	}
-    #window3 .wincontent {	width: 400px; height: 400px;	}
+	#window0 {	left: 30px;	top:150px;}/* Currently... */
+	#window3 {	left: 70px; top:210px;	} /* Main Window */
+    #window3 .wincontent {	width: 400px; height: 400px;	} /* Main Window */
     #window0 .wincontent {	width: 350px; height: 350px;	}	
 }
 @media screen and (max-width:770px){
-	#window0 {	left: 30px;	top:150px;}
-	#window3 {	left: 70px; top:210px;	}
-    #window3 .wincontent {	width: 400px; height: 400px;	}
-    #window0 .wincontent {	width: 350px; height: 350px;	}	
+	#window0 {	left: 30px;	top:150px;} /* Currently... */
+	#window3 {	left: 70px; top:210px;	} /* Main Window */
+    #window3 .wincontent {	width: 400px; height: 400px;	} /* Main Window */
+    #window0 .wincontent {	width: 350px; height: 350px;	} /* Currently... */	
 }
 @media screen and (max-width:540px){
-	#window0 {	left: 30px;	top:120px;}
+	#window0 {	left: 30px;	top:120px;} /* Currently... */
     #window1 {	top: 580px; left: 30px;}
     #window2 {	top: 30px; left: 30px;}
-	#window3 {	left: 30px; top:210px;	}
+	#window3 {	left: 30px; top:210px;	} /* Main Window */
     #window1 .wincontent {	width: 300px; height: 100px;	}
-    #window3 .wincontent {	width: 350px; height: 300px;	}
-    #window0 .wincontent {	width: 350px; height: 300px;	}	
+    #window3 .wincontent {	width: 350px; height: 300px;	} /* Main Window */
+    #window0 .wincontent {	width: 350px; height: 300px;	} /* Currently... */	
 }
