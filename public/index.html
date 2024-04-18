@@ -9,11 +9,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="/public/assets/jquery.style-my-tooltips.js"></script>
 
-    <title>Lea's Room</title>
-
-    <link href="css/main.css" rel="stylesheet" type="text/css" media="all">
+    <title>Snails</title>
+    <link href="https://unpkg.com/98.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/98.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/style-my-tooltips.css" rel="stylesheet" type="text/css" />
-
     <script type="text/javascript" src="./assets/counter.js"></script>
     <script>
       $(document).ready(function(){
@@ -48,172 +47,62 @@
         mode = 0;
       }
     }</script>
-   
-  </head>
+
   <style>
-
-
     main {
     display: grid;
-    max-width: 720px;
+    max-width: 1000px;
     height: auto;
     grid-template-areas:
             "header"
             "container"
-            "nav"
             "footer";
     margin:auto;
+    text-align: center;
 }
 
     footer{
       grid-area: footer;
-      margin-bottom:20px;
-    }
+      margin-top:10px;
+      text-align: center;
+      font-size: 14px;
+      font-family:'Lucida Console';
+}
+    
 
     header{
       grid-area: header;
       text-align: center;
       margin-bottom: 20px;
-    }
-
-    #container {
-      position: relative;
-      margin:auto;
-      width: 605px;
-      height: 600px;
-      grid-area: container;
-    }
-
-    #counter{
-      font-size: .8em;
-      text-align: center;
-      font-style: italic;
+      font-family: 'HeaderFont', 'Lucida Console';
+      font-size: 30px;
       font-weight: bold;
+
     }
 
-    .room{
-      background-image: url(./Images/Splash/Room-green.png);
-      background-repeat: no-repeat;
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      left:0;
-      right:0;
-    }
-/*
-    .cat{
-    
-    }
-*/
-    .computer{
-    background-image: url(./Images/Splash/SomeonesPC.png);
-    left:310px;
-    top:180px;
-    position:absolute;
-    background-size: cover;
-    width:80px;
-    height: 130px;
+    .updates-box{
+    margin: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 110px;
+    text-align: left;
     }
 
-    .computer:hover{
-      filter: drop-shadow(0 0 1rem rgb(255, 255, 255));
-      transform:translateY(2px);
-      transition: all ease 0.2s;
+    .splash_spacer{
+    width: auto;
+    height: 100px;
     }
-              
-    #updates {
-        margin-top: 20px;
-        height: 100px;
-          }
 
-    .nav {
-        grid-area: nav;
-        position:relative;
-        bottom: 5px;
-        right: 50%;
-        background-color: rgba(253,253,244, 0.9);
-        border-radius: 2px;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        opacity: 0;
-        transition: all 0.2s ease-out;
-        width: 60%;
-        margin: 0;
-        transform: translateX(50%)translateY(20px);
       
-        
-    }
-    
-    .nav li {
-        flex:1;
-        list-style-type: none;
-        text-align:center;
-        border-right: 1px solid #cfcfc2;
-    }
-
-    .nav a {
-        display: inline-block;
-        text-indent: 0;
-        font-size: 8px;
-        font-weight: 500;
-        color: var(--color-primary-a80);
-        font-family: 'minecraftia', monospace;
-        text-transform: uppercase;
-        line-height: 16px;
-        text-decoration: none;
-        
-    }
-
-    .nav a:hover{
-      color:rgb(110, 110, 110);
-    }
-    
-    
-    .nav.mobile {
-        display: none;
-    }
-    
     @media screen and (max-width: 1024px) {
         .nav, .nav, .room .bookshelf .cat .monitors .poster {
             display: none;
         }
         
-        .nav.mobile {
-            display: flex;
-            opacity: 1;
-            position:relative; 
-            bottom: auto;
-            right: auto;
-            transform: none;
-            margin: 0 auto;
-            width: 100%;
-        }
-        
-        .nav.mobile li a{
-            font-size: 18px;
-            line-height: 22px;
-        }
 
         #container{
           width: 500px;
           height: 500px;
-        }
-
-        .room{
-          width: 500px;
-          background-size: contain;
-          background-position: center center;
-          background-repeat: no-repeat;
-        }
-
-        .computer{
-          width: 60px;
-          background-size: contain;
-          background-position: center center;
-          background-repeat: no-repeat;
-          left:260px;
-          top:140px;
         }
     }
 
@@ -228,71 +117,49 @@
           
         }
 
-        .room{
-          width: 400px;
-          background-size: contain;
-          background-position: center center;
-          background-repeat: no-repeat;
-        }
-
-        .computer{
-          width: 50px;
-          background-size: contain;
-          background-position: center center;
-          background-repeat: no-repeat;
-          left:210px;
-          top:100px;
-        }
-
     }
 
 
     
 
 </style>
+</head>
 <body>
 
 <main>
 
 
 <header>
-  <h1>welcome to lea's room...</h1>
-  <button type="button" onclick="grayscale()">Toggle Grayscale</button>
+    <div class="splash_spacer"></div>
+<a href="/main.html">ENTER</a>
 </header>
-
-<div id="container">
-
-  <div class="room"></div>
-  <a href="/someonespc"><div class="computer" title="Someone's PC"></div></a>
-
-</div>  
 
 
 
   </div>
-             <ul class="nav mobile">
-                   <li><a href="/home.html">Enter</a></li>
-                   <li><a href="/about.html">About</a></li>
-                   <li><a href="/someonespc">Someone's PC</a></li>
-                   <li><a href="/bookshelf">Bookshelf</a></li>
-               </ul>
+
+
+
+        <div class="window" style="max-width: 999px; height: 150px">
+            <div class="title-bar">
+              <div class="title-bar-text">Updates</div>
+              <div class="title-bar-controls">
+                <button aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="window-body">
+                <div class="updates-box" id="updates"></div>
+            </div>
+          </div>
 
      <footer>
-
-      <div class="blurb" id="updates">
-       
-        </div>
-     
-     
       <div id="counter">
         Last Updated: <span id="lastupdate"></span> | 
         Visitors: <span id="hitcount"></span> | ♡2024 Copying is an act of love. <a href="https://copyheart.org/manifesto/" target="_blank" rel="noreferrer noopener">Please copy.</a> <br><br>
-        <a href="https://lovesick.cafe/grrrl" target="_blank" rel="noreferrer noopener"><img src="/public/Images/Splash/madebyagirl.png"></a>
+        <a href="https://lovesick.cafe/grrrl" target="_blank" rel="noreferrer noopener"><img src="./Images/Splash/madebyagirl.png"></a>
   </div>   
      </footer>
-    </main>
-
-
+</main>
   </div>
 </body>
 </html>
