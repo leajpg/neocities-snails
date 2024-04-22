@@ -18,7 +18,7 @@ display:flex;
           "header header header"
           "left main right"
           "... footer ...";
-  grid-template-columns: 30% 50% 1fr;
+  grid-template-columns: 22% 50% 1fr;
   grid-template-rows: 80px 1fr 80px;
 }
 
@@ -53,6 +53,10 @@ aside.left {
 
 }
 
+aside .img{
+  width: auto;
+}
+
 aside.right {
   grid-area: right;
 }
@@ -65,18 +69,23 @@ main {
   background-repeat: no-repeat;
 }
 
+main img{
+  width: auto;
+}
+
 footer {
   grid-area: footer;
 }
 
 .icons{
-width: 18%;
+width: 5%;
+margin-right:170px;
 text-align: center;
 background-color: none;
 }
 
 .icon{
-  background: rgba(255, 255, 255, 0.082);
+  background: rgba(255, 255, 255, 0.034);
   box-shadow: none;
   border: 0px;
   opacity: 0.5;
@@ -88,7 +97,9 @@ background-color: none;
 }
 
 .icon:hover{
-  background: rgba(255, 255, 255, 0.11) 
+  background: rgba(255, 255, 255, 0.075);
+  text-decoration: underline dotted;
+
 }
 
 .icons button:active{
@@ -97,7 +108,7 @@ background-color: none;
 
 .icons .icon{
   display: grid;
-  margin-top: 80px;
+  margin-top: 15px;
   text-align: left;
   font-size: 14px;
   padding-left:10px;
@@ -106,6 +117,7 @@ background-color: none;
   opacity: 1;
   font-weight: 400;
   text-align: center;}
+
  
 button{
   vertical-align: middle;

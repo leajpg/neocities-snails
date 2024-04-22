@@ -47,7 +47,7 @@
   h2,
   h3 legend,
   .title-bar {
-    font-size: 14px;
+    font-size: 15px;
   }
   
   .window,
@@ -57,11 +57,23 @@
   h5,
   h6,
   button,
-  details {
-    font-size: 16px;
+  details, li, ul{
+    font-size: 15px;
+    font-weight: 400;
     font-family: "Pixelated MS Sans Serif", Arial;
   }
-  
+
+  li{
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Pixelated MS Sans Serif", Arial;
+  }
+
+  ul{
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Pixelated MS Sans Serif", Arial;
+  }
   /* alignment for stuff */
   .title-bar {
     padding: 6px 5px 6px 6px;
@@ -74,7 +86,7 @@
   /* contents inside window body main and aside have margins, if over x amount will scroll */
   main,
   aside {
-    max-height: 575px;
+    max-height: 700px;
     overflow: auto;
     padding: 10px;
   }
@@ -88,17 +100,27 @@
 
   /* adds margins to fieldsets!!! */
   fieldset {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 20px;
+  }
+
+  .field-row{
+    padding:10px;
+    
+
   }
   
   /* styles links to be underlined when hovered over */
   a {
     text-decoration: none;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
   }
   
   a:hover {
-    text-decoration: underline;
+    text-decoration: underline dotted;
   }
   
   /* styling for different image gallery types */
