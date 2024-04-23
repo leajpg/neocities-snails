@@ -62,7 +62,7 @@ aside.right {
 }
 
 main {
-  height: 400px;
+  height: 700px;
   grid-area: main;
   background-size: contain;
   background-position: center center;
@@ -126,3 +126,41 @@ button{
 .icons button:hover{
   vertical-align: middle;
 }
+
+legend{
+  font-weight: 500;
+}
+
+/* button marquee styles */
+.marquee {
+  --gap: 5px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+}
+
+@keyframes scroll {
+  from {
+      transform: translateX(0);
+  }
+
+  to {
+      transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+/* button marquee animation */
+.marquee__content {
+  animation: scroll 10s linear infinite; }

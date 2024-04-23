@@ -10,19 +10,28 @@
     <link href="https://unpkg.com/98.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/98.css" rel="stylesheet" type="text/css" media="all">
     <script type="text/javascript" src="./assets/counter.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./assets/nowlistening.js" type="text/javascript"></script>
 
     <script>
-      function loadGuestbook() {
-        var mainSection = document.querySelector("main");
-        mainSection.querySelector(".title-bar-text").textContent = "Guestbook";
-        mainSection.querySelector(".window-body").innerHTML = `
-          <div class="updates-box" id="updates"></div>
-          <p>This is your guestbook content.</p>
-        `;
+      function loadContent(page, title) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("main-content").innerHTML = this.responseText;
+            document.querySelector("main .title-bar-text").textContent = title;
+          }
+        };
+        xhttp.open("GET", page, true);
+        xhttp.send();
       }
     </script>
 
+    <script>
+      $(document).ready(function(){
+        $(".left").load("./sidebar.html");
+      });
+    </script>
    <style>
 
 .icons button:active{
@@ -48,73 +57,18 @@
 
 
   <aside class="left">
-
-    <div class="window" style="max-width: 100%; max-height: 700px;">
-      <div class="title-bar">
-        <div class="title-bar-text">sidebar</div>
-        <div class="title-bar-controls">
-          <button aria-label="Close"></button>
-        </div>
-      </div>
-      <div class="window-body">
-        <img style="" src="./Images/silverfairy.gif">
-
-       <!-- <div class="field-row">
-          <input id="radio5" type="radio" name="first-example">
-          <label for="radio5">Light BG</label> <br>
-          <input id="radio6" type="radio" name="first-example">
-          <label for="radio6">Dark BG</label>
-        </div>
-        ----> 
-
-          <ul class="tree-view">
-          
-            <li>
-              <details open>
-                <summary>Navigation</summary>
-                <ul>
-                  <li><a href="/index.html">Splash</a></li>
-                  <li><a href="#" onclick="loadGuestbook()">Guestbook</a></li>
-                  <li><a href="/sitemap/html">Sitemap</a></li>
-                </ul>
-              </details>
-            </li>
-
-            <li>
-              <details closed>
-                <summary>Link Me</summary>
-                <ul>
-                  <li><img src="https://cyber.dabamos.de/88x31/88x31blank.gif"></li>
-                  <li>
-                    <textarea style="max-width: 200px;">no button yet sorry :(</textarea>
-                  </li>
-                  <li>hot linking is OK on this site</li>
-                </ul>
-              </details>
-            </li>
-
-          </ul></ul>
-        <div class="status-bar">
-          <p class="status-bar-field">Last Updated: <span id="lastupdate"></span></p>
-          <p class="status-bar-field">Visitors: <span id="hitcount"></span</p>
-        </div>
-
-
-      </div>
-    </div>
   </aside>
 
   <main>
    
     <div class="window" style="max-width:100%; height:auto">
       <div class="title-bar">
-        <div class="title-bar-text">snails.html</div>
+        <div class="title-bar-text">text</div>
         <div class="title-bar-controls">
           <button aria-label="Close"></button>
         </div>
       </div>
-      <div class="window-body">
-          <div class="updates-box" id="updates"></div>
+      <div class="window-body" id="main-content">
           <p>hello and welcome! many things on the site are under construction and/or broken links so please bear with me :)</p><p>site uses <a href="https://jdan.github.io/98.css/" target="_blank" rel="noreferrer noopener nofollow">98.css</a></p>
       </div>
     </div>
