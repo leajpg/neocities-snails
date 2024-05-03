@@ -3,6 +3,11 @@
   src: url(../assets/fonts/DebugMenu.ttf)("truetype");
 }
 
+@font-face {
+  font-family: 'MSSans';
+  src: url(../assets/fonts/MSSansSerif.ttf)("truetype");
+}
+
 
 .container0{
 width: 100%;
@@ -13,7 +18,7 @@ display:flex;
   display: grid;
   width: 1400px;
   height: auto;
-  grid-gap:20px;
+  grid-gap:10px;
   grid-template-areas:
           "header header header"
           "left main right"
@@ -25,8 +30,8 @@ display:flex;
 @media screen and (max-width: 1024px)  {
 
  .container1 {
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
   grid-template-areas:
     "header"
     "main"
@@ -34,7 +39,31 @@ display:flex;
     "right"
     "footer"
 }
+
+  header{
+    display:grid;
+    grid-area: header;
+  }
+
+  .icons{
+    display: none;
+  }
+
 }
+
+@media screen and (min-width: 700px)  {
+
+   header{
+     display:grid;
+     grid-area: header;
+     display: none;
+   }
+ 
+   .icons{
+     display: inline;
+   }
+ 
+ }
 
 
 header {
@@ -62,7 +91,8 @@ aside.right {
 }
 
 main {
-  height: 700px;
+  height: auto;
+  overflow: hidden;
   grid-area: main;
   background-size: contain;
   background-position: center center;
@@ -78,10 +108,15 @@ footer {
 }
 
 .icons{
-width: 5%;
 margin-right:170px;
 text-align: center;
-background-color: none;
+width: 1%;
+}
+
+
+@media all and (max-width: 700px) {
+  .icons .icon{
+  }
 }
 
 .icon{
@@ -107,7 +142,6 @@ background-color: none;
 }
 
 .icons .icon{
-  display: grid;
   margin-top: 15px;
   text-align: left;
   font-size: 14px;
@@ -117,6 +151,23 @@ background-color: none;
   opacity: 1;
   font-weight: 400;
   text-align: center;}
+
+  .mobile-nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-family: "Pixelated MS Sans Serif", Arial;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .mobile-nav a{
+    color:black
+  }
+
+  #icon1{
+    width: auto;
+    padding: 10px;
+  }
 
  
 button{
