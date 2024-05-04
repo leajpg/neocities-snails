@@ -6,7 +6,7 @@
   
   /* background image */
   body {
-    background-color: teal;
+    background-color: rgb(90, 146, 146);
     background-image: none;
   }
   
@@ -119,11 +119,15 @@
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
   }
+
+  a{
+    color:#233d5a;
+  }
   
   a:hover {
     text-decoration: underline dotted;
   }
-  
+
   /* styling for different image gallery types */
   
   .buttons {
@@ -226,6 +230,10 @@
     overflow: hidden;
     position: absolute;
     left: 20px;
+  }
+
+  .title-bar {
+    background:linear-gradient(90deg,#42283d,#6f849b);
   }
   
   /* MEDIA QUERY : max width is original - 200px */
