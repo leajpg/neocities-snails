@@ -87,7 +87,7 @@
   /* contents inside window body main and aside have margins, if over x amount will scroll */
   main,
   aside {
-    max-height: 700px;
+    max-height: auto;
     overflow: auto;
     padding: 10px;
   }

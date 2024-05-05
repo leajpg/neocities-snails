@@ -17,14 +17,14 @@ display:flex;
 .container1 {
   display: grid;
   width: 1400px;
-  height: auto;
-  grid-gap:10px;
+  height: 100%;
+  grid-gap:2px;
   grid-template-areas:
           "header header header"
           "left main right"
           "... footer ...";
-  grid-template-columns: 22% 50% 1fr;
-  grid-template-rows: 80px 1fr 80px;
+  grid-template-columns: 1fr 50% 24%;
+  grid-template-rows: auto;
 }
 
 @media screen and (max-width: 1024px)  {
@@ -91,7 +91,7 @@ aside.right {
 }
 
 main {
-  height: auto;
+  height: auto !important;
   overflow: hidden;
   grid-area: main;
   background-size: contain;
@@ -111,6 +111,20 @@ footer {
 margin-right:170px;
 text-align: center;
 width: 1%;
+}
+
+.buttons{
+  width: 100%;
+}
+
+.buttons img{
+  opacity: .8;
+  padding:3px;
+}
+
+.buttons img:hover{
+  transform:scale(110%);
+  opacity: 1;
 }
 
 
